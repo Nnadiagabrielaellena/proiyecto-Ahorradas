@@ -8,6 +8,7 @@
       <title>Document</title>
       <script src="https://cdn.tailwindcss.com"></script>
       <script src="https://kit.fontawesome.com/7505fbf04c.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 </head>
 
 <body class=" bg-gray-100 flex flex-col items-center">
@@ -107,9 +108,14 @@
             <div id="seccionOperaciones"class="hidden Operaciones Balance   bg-white rounded-2xl  shadow-xl    m-[20px] p-[15px] w-11/12  ">
                   <div class="  justify-between lg:text-2xl md:flex">
                         <h2 class="operaciones  ">Operaciones</h2>
-                        <button class="  bg-green-200 p-[10px] m-2 "> + Nueva operacion</button>
+                        <button id="nuevaOperacion" class="  bg-green-200 p-[10px] m-2 "> + Nueva operacion</button>
                   </div>
-                  <div class="imagenNuevaOperacion bg-[./Style/img/imagenNuevoGasto] bg-gray-500 h-[400px] w-11/12">
+                  <div id ="contenedorOperaciones"class=" flex justify-between  imagenNuevaOperacion bg-[./Style/img/imagenNuevoGasto] bg-gray-500 h-[400px] w-11/12 text-lg p-8">
+                        <p>Descripción</p>
+                        <p>Categoría</p>
+                        <p>Fecha</p>
+                        <p>Monto</p>
+                        <p>Acciones</p>
                   </div>
                   <div class="flex flex-col items-center">
                         <h2 class="flex   text-2xl">Sin Resultados</h2>
@@ -174,7 +180,7 @@
             <h2 class="text-2xl flex  justify-center items-center m-8 ">Operaciones Insuficientes</h2>
             <h3 class="text-1xl m-8">Prueba agregando mas operaciones</h3>
       </div>
-      <div id="seccionNuevaOperacion" class=" hidden Operaciones Balance   bg-white rounded-2xl  shadow-xl    m-[20px] p-[15px]  w-11/12 ">
+      <div id="seccionNuevaOperacion" class="hidden Operaciones Balance   bg-white rounded-2xl  shadow-xl    m-[20px] p-[15px]  w-11/12 ">
             <h2 class="font-bold text-3xl m-8">Nueva Operacion</h2>
             <div>
                   <label class="font-bold" for="">Descripcion</label>
