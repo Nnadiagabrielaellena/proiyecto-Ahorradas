@@ -11,118 +11,149 @@
       <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 </head>
 
-<body class=" bg-gray-100 flex flex-col items-center">
+<body>
+      <header class=" bg-gray-100 flex flex-col items-center">
 
-      <div class="contenedor-superior flex	 bg-teal-300 w-full justify-between text-white  ">
-            <div class="superior-izquierdo lg:text-2xl "> <i class="fa-solid fa-wallet "></i>Ahorradas</div>
-            <div class="hidden lg:flex lg:text-2xl m-5 superior-derecho m-5   text-xs flex "> 
-                        
-                  <div id="Balance" class=" m-5 text-1xl"><i class="fa-regular fa-chart-line-up bg-gray-500 text-tx "></i> Balance
+            <div class="contenedor-superior flex	 bg-teal-300 w-full justify-between text-white  ">
+                  <div class="superior-izquierdo lg:text-2xl "> <i class="fa-solid fa-wallet "></i>Ahorradas</div>
+                  <div class="hidden lg:flex lg:text-2xl m-5 superior-derecho m-5   text-xs flex ">
+
+                        <div id="" class="Balance m-5 text-1xl"><i
+                                    class="fa-regular fa-chart-line-up bg-gray-500 text-tx "></i> Balance
+                        </div>
+                        <div id="" class="Categoria m-5 text-1xl">Categorias</div>
+                        <div id="" class="Reporte m-5 text-1xl">reportes</div>
                   </div>
-                  <div id="Categoria" class=" m-5 text-1xl">Categorias</div>
-                  <div id="Reporte" class=" m-5 text-1xl">reportes</div>
             </div>
-      </div>
-      <div
-            class="contenedor-button-superior   flex-col  w-full h-[130px]   bg-white text-black lg:flex lg:text-2xl lg:hidden">
-            <div>
-                  <button id="Balance"class="m-2">Balance</button>
-            </div>
-            <div>
-                  <button class="m-2">Categorias</button>
-            </div>
-            <div>
-                  <button class="m-2">Reportes</button>
-            </div>
-
-      </div>
-
-      <div class="contenedor-inferior     w-11/12  m-8  lg:flex lg:text-2xl">
-            <div>
-                  <div id ="seccionBalance"class= " hidden rounded-sm   h-[250px]   bg-white  shadow-xl m-[20px] p-[15px] w-11/12">
-                        <h2 class=" text-2xl font-bold  ">Balance</h2>
-                        <div class="contenedor-ganancia flex m-[20px] justify-between">
-                              <div class="ganancia ">ganancia</div>
-                              <div class="num-ganancia  text-green-300">0</div>
-                        </div>
-                        <div class="contenedor-gastos flex m-[20px] justify-between">
-                              <div class="gastos ">gastos</div>
-                              <div class="num-gastos text-red-300">5</div>
-                        </div>
-                        <div class="contenedor-total flex m-[20px] justify-between">
-                              <div class="total font-bold">total</div>
-                              <div class="num-total font-bold">15</div>
-                        </div>
+            <div
+                  class="contenedor-button-superior   flex-col  w-full h-[130px]   bg-white text-black lg:flex lg:text-2xl lg:hidden">
+                  <div>
+                        <button id="" class="Balance m-2">Balance</button>
                   </div>
-                  <div id="seccionFiltros"
-                        class="hidden Filtros text-2xl    bg-white shadow-xl m-[20px] p-[15px] w-11/12 justify-between ">
-                        <div class=" contenedorTituloFiltros flex justify-between ">
-                              <h2 class=" font-bold">Filtros</h2>
-                              <button class="text-blue-400 text-base">Ocultar filtros</button>
+                  <div>
+                        <button class="Categoria m-2">Categorias</button>
+                  </div>
+                  <div>
+                        <button class="Reporte m-2">Reportes</button>
+                  </div>
+
+            </div>
+      </header>
+      <main class="lg:flex">
+            <div class="contenedor-inferior     w-11/12  m-8  lg:flex lg:text-2xl">
+                  <div>
+                        <div id="seccionBalance"
+                              class=" hidden rounded-sm   h-[250px]   bg-white  shadow-xl m-[20px] p-[15px] w-11/12">
+                              <h2 class=" text-2xl font-bold  ">Balance</h2>
+                              <div class="contenedor-ganancia flex m-[20px] justify-between">
+                                    <div class="ganancia ">ganancia</div>
+                                    <div class="num-ganancia  text-green-300">0</div>
+                              </div>
+                              <div class="contenedor-gastos flex m-[20px] justify-between">
+                                    <div class="gastos ">gastos</div>
+                                    <div class="num-gastos text-red-300">5</div>
+                              </div>
+                              <div class="contenedor-total flex m-[20px] justify-between">
+                                    <div class="total font-bold">total</div>
+                                    <div class="num-total font-bold">15</div>
+                              </div>
                         </div>
-                        <div class="contenedorFiltros  h-[400px]  text-base ">
-                              <div class="m-2">
-                                    <div class="label">
-                                          <label class="Tipo " for="">Tipo</label>
+
+                        <div id="seccionFiltros"
+                              class="hidden Filtros text-2xl    bg-white shadow-xl m-[20px] p-[15px] w-11/12 justify-between ">
+                              <div class=" contenedorTituloFiltros flex justify-between ">
+                                    <h2 class=" font-bold">Filtros</h2>
+                                    <button class="text-blue-400 text-base">Ocultar filtros</button>
+                              </div>
+                              <div class="contenedorFiltros  h-[400px]  text-base ">
+                                    <div class="m-2">
+                                          <div class="label">
+                                                <label class="Tipo " for="">Tipo</label>
+                                          </div>
+                                          <select name="" id="Filtros">
+                                                <option value="Todos">Todos</option>
+                                                <option value="Gastos">Gastos</option>
+                                                <option value="Ganancia">Ganancia</option>
+                                          </select>
+                                    </div>
+                                    <div class="m-5">
+                                          <div class="label   ">
+
+                                                <label class="" for="">Categorias</label>
+                                          </div>
+                                          <select name="" id="">
+                                                <option value="">Todas</option>
+                                                <option value="">Comidas</option>
+                                                <option value="">Servicios</option>
+                                                <option value="">Salidas</option>
+                                                <option value="">Educacion</option>
+                                                <option value="">Transporte</option>
+                                                <option value="">Trabajo</option>
+                                          </select>
+                                    </div>
+                                    <div class="label m-5">
+                                          <label for="">Desde</label>
+                                    </div>
+                                    <input type="date" name="" id="">
+                                    <div class="label m-5">
+                                          <label for="">Ordenar por</label>
                                     </div>
                                     <select name="" id="">
-                                          <option value="">Todos</option>
-                                          <option value="">Gastos</option>
-                                          <option value="">Ganancia</option>
+                                          <option value="">Mas reciente</option>
+                                          <option value="">Menos reciente</option>
+                                          <option value="">Mayor monto</option>
+                                          <option value="">Menor monto</option>
+                                          <option value="">A/Z</option>
+                                          <option value="">Z/A</option>
                                     </select>
-                              </div>
-                              <div class="m-5">
-                                    <div class="label   ">
 
-                                          <label class="" for="">Categorias</label>
-                                    </div>
-                                    <select name="" id="">
-                                          <option value="">Todas</option>
-                                          <option value="">Comidas</option>
-                                          <option value="">Servicios</option>
-                                          <option value="">Salidas</option>
-                                          <option value="">Educacion</option>
-                                          <option value="">Transporte</option>
-                                          <option value="">Trabajo</option>
-                                    </select>
                               </div>
-                              <div class="label m-5">
-                                    <label for="">Desde</label>
-                              </div>
-                              <input type="date" name="" id="">
-                              <div class="label m-5">
-                                    <label for="">Ordenar por</label>
-                              </div>
-                              <select name="" id="">
-                                    <option value="">Mas reciente</option>
-                                    <option value="">Menos reciente</option>
-                                    <option value="">Mayor monto</option>
-                                    <option value="">Menor monto</option>
-                                    <option value="">A/Z</option>
-                                    <option value="">Z/A</option>
-                              </select>
-
                         </div>
-                  </div>
-            </div>
-            <div id="seccionOperaciones"class="hidden Operaciones Balance   bg-white rounded-2xl  shadow-xl    m-[20px] p-[15px] w-11/12  ">
-                  <div class="  justify-between lg:text-2xl md:flex">
-                        <h2 class="operaciones  ">Operaciones</h2>
-                        <button id="nuevaOperacion" class="  bg-green-200 p-[10px] m-2 "> + Nueva operacion</button>
-                  </div>
-                  <div id ="contenedorOperaciones"class=" flex justify-between  imagenNuevaOperacion bg-[./Style/img/imagenNuevoGasto] bg-gray-500 h-[400px] w-11/12 text-lg p-8">
-                        <p>Descripción</p>
-                        <p>Categoría</p>
-                        <p>Fecha</p>
-                        <p>Monto</p>
-                        <p>Acciones</p>
-                  </div>
-                  <div class="flex flex-col items-center">
-                        <h2 class="flex   text-2xl">Sin Resultados</h2>
-                        <p class=" flex justify-center m-[40px]">Cambia los filtros o agrega operaciones</p>
+
                   </div>
 
-            </div>
+                  <div id="seccionOperaciones"
+                        class="hidden Operaciones Balance   bg-white rounded-2xl  shadow-xl    m-[20px] p-[15px] w-11/12  ">
+                        <div class="  justify-between lg:text-2xl md:flex">
+                              <h2 class="operaciones  ">Operaciones</h2>
+                              <button id="nuevaOperacion" class="  bg-green-200 p-[10px] m-2 "> + Nueva
+                                    operacion</button>
+                        </div>
+                        <div id="contenedorOperaciones"
+                              class=" lg:flex   imagenNuevaOperacion bg-[./Style/img/imagenNuevoGasto] bg-gray-500 h-[400px] w-11/12 text-lg p-8  ">
+                              <div class="flex ">
+                                    <div class="">
+                                          <label for="">Descripcion</label>
+                                          <input type="text" name="" id="">
+                                    </div>
+                                    <div>
+                                          <label for="">Categoria</label>
+                                          <input type="text" name="" id="">
+                                    </div>
+                              </div>
+                              <div class="">
+                                    <label for="">Fecha</label>
+                                    <input type="date" name="" id="">
+                              </div>
+                              <div>
+                                    <label for="">Monto</label>
+                                    <input type="number" name="" id="">
+                              </div>
+                              <div>
+                                    <label for="">Acciones</label>
+                                    <div class="flex">
+                                          <button class="m-2">Editar</button>
+                                          <button>Eliminar</button>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                              <h2 class="flex   text-2xl">Sin Resultados</h2>
+                              <p class=" flex justify-center m-[40px]">Cambia los filtros o agrega operaciones</p>
+                        </div>
+
+                  </div>
+      </main>
 
 
 
@@ -131,7 +162,8 @@
 
       </div>
 
-      <div id="seccionCategoria"class="hidden contenedor-categorias flex-col   bg-white rounded-2xl  shadow-xl  m-[20px] p-[15px]   w-11/12">
+      <div id="seccionCategoria"
+            class="hidden contenedor-categorias flex-col   bg-white rounded-2xl  shadow-xl  m-[20px] p-[15px]   w-11/12">
             <h2 class="text-3xl m-8"> Categorias</h2>
             <div class="flex w-[200px] justify-between">
                   <div>
@@ -174,13 +206,15 @@
                   </div>
             </div>
       </div>
-      <div id="seccionReporte" class="hidden contenedorReporte   bg-white rounded-2xl  shadow-xl    m-[20px] p-[15px] w-11/12 ">
+      <div id="seccionReporte"
+            class="hidden contenedorReporte   bg-white rounded-2xl  shadow-xl    m-[20px] p-[15px] w-11/12 ">
             <h2 class="text-3xl m-8 font-bold">REPORTES</h2>
             <div class="dibujoReporte h-[400px]  bg-gray-100 w-11/12"></div>
             <h2 class="text-2xl flex  justify-center items-center m-8 ">Operaciones Insuficientes</h2>
             <h3 class="text-1xl m-8">Prueba agregando mas operaciones</h3>
       </div>
-      <div id="seccionNuevaOperacion" class="hidden Operaciones Balance   bg-white rounded-2xl  shadow-xl    m-[20px] p-[15px]  w-11/12 ">
+      <div id="seccionNuevaOperacion"
+            class="hidden Operaciones Balance   bg-white rounded-2xl  shadow-xl    m-[20px] p-[15px]  w-11/12 ">
             <h2 class="font-bold text-3xl m-8">Nueva Operacion</h2>
             <div>
                   <label class="font-bold" for="">Descripcion</label>
